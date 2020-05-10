@@ -1,14 +1,14 @@
 {
   "name": "auth-social",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "\"# auth-social\"",
-  "main": "./build/index.js",
+  "main": "./dist/index.js",
   "types": "./build/index.d.ts",
-  "module": "./build/index.js",
+  "module": "./dist/index.js",
   "scripts": {
     "start:dev": "nodemon",
     "start": "npm run build && node build/index.js",
-    "build": "rimraf ./build && tsc",
+    "build": "rimraf ./build && tsc && webpack --watch ./build/index.js --output ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "git push --tags && npm publish"
   },
@@ -28,7 +28,10 @@
     "nodemon": "^2.0.3",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "tslib": "^1.11.2"

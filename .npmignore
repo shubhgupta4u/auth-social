@@ -1,5 +1,10 @@
 node_modules/
 src/
+webpack.config.js
+package-lock.json
+tsconfig.json
+nodemon.json
+
 # Ignore files with sensitive environment variables
 .env
 .env.test
