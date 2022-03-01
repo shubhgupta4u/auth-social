@@ -1,6 +1,6 @@
 {
   "name": "auth-social",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A NodeJS/Typescript module for web application that supports authentication with Google and Facebook and can be extended to other provider.",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",

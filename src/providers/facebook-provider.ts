@@ -17,7 +17,7 @@ export class FacebookLoginProvider extends BaseAuthProvider {
     constructor(appid:string
         , opt:LoginOption = { scope: 'email,public_profile' }
         , locale:string = 'en_US'
-        , fields:string = 'name,email,picture,first_name,last_name,user_gender,user_birthday'
+        , fields:string = 'name,email,picture,first_name,last_name'
         , version:string = 'v7.0') {
         super();
         this.appId = appid;
@@ -67,8 +67,6 @@ export class FacebookLoginProvider extends BaseAuthProvider {
                         user.photoUrl = 'https://graph.facebook.com/' + fbUser.id + '/picture?type=normal';
                         user.firstName = fbUser.first_name;
                         user.lastName = fbUser.last_name;
-                        user.gender = fbUser.user_gender;
-                        user.dob = fbUser.user_birthday;
                         user.authToken = authResponse.accessToken;
                         user.facebook = fbUser;
                         resolve(user);
@@ -109,9 +107,7 @@ export class FacebookLoginProvider extends BaseAuthProvider {
                         user.photoUrl = 'https://graph.facebook.com/' + fbUser.id + '/picture?type=normal';
                         user.firstName = fbUser.first_name;
                         user.lastName = fbUser.last_name;
-                        user.gender = fbUser.user_gender;
-                        user.dob = fbUser.user_birthday; 
-                        user.authToken = authResponse.accessToken;                       user.authToken = authResponse.accessToken;
+                        user.authToken = authResponse.accessToken;
                         user.facebook = fbUser;
                         resolve(user);
                     });
