@@ -10,6 +10,8 @@ export declare class User {
     authToken?: string;
     idToken?: string;
     authorizationCode?: string;
+    gender?: string;
+    dob?: string;
     /**
      * Contains the entire object returned from the Facebook API based on the fields you requested.
      * Only available for the Facebook provider.

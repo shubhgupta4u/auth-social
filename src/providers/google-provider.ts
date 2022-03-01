@@ -61,7 +61,6 @@ export class GoogleLoginProvider extends BaseAuthProvider {
                 var backendToken = user.getAuthResponse(true).id_token;
                 _user.id = profile.getId();
                 _user.name = profile.getName();
-                _user.gender = profile.getGender();
                 _user.email = profile.getEmail();
                 _user.photoUrl = profile.getImageUrl();
                 _user.firstName = profile.getGivenName();
@@ -102,7 +101,6 @@ export class GoogleLoginProvider extends BaseAuthProvider {
                 var backendToken = _this.GoogleAuth.currentUser.get().getAuthResponse(true).id_token;
                 user.id = profile.getId();
                 user.name = profile.getName();
-                user.gender = profile.getGender();
                 user.email = profile.getEmail();
                 user.photoUrl = profile.getImageUrl();
                 user.firstName = profile.getGivenName();
